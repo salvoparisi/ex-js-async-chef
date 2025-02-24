@@ -12,8 +12,7 @@ async function getChefBirthday(id) {
         throw new Error("Ricetta non Trovata")
     }
     try {
-        let userId = recipes.userId
-        chef = await fetchJson(`https://dummyjson.com/users/${userId}`)
+        chef = await fetchJson(`https://dummyjson.com/users/${recipes.userId}`)
     } catch {
         throw new Error("Chef non Trovato")
     }
